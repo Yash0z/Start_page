@@ -2,24 +2,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
- background-color: rgb(0, 0, 0);
+
+* {
+   background-color: rgb(0, 0, 0);
 }
+
 /* default scrollbar  */
 ::-webkit-scrollbar {
-    width: 1px;
+   width: 1px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(200, 200, 238);
-    border-radius: 5px;
-    max-height: 40px;
+   background-color: rgb(200, 200, 238);
+   border-radius: 5px;
+   max-height: 40px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: rgb(60, 59, 59);
+   background-color: rgb(60, 59, 59);
 }
 
 ::-webkit-scrollbar-corner {
-    background-color: transparent;
+   background-color: transparent;
 }
+
+
+@media only screen and (max-width: 600px) {
+   .react-player {
+      width: 100vw;
+      height: 50vh;
+      /* Adjusted width for screens <= 600px */
+   }
+}
+
+ .react-player {
+   position: absolute;
+   top: 0;
+   left: 0;
+ }

@@ -23,17 +23,20 @@ const Search = () => {
 
 	return (
 		<>
-			<div className='absolute top-60  w-[100vw] pl-10 sm:w-[40vw] '>
+			<div className='relative top-60 flex justify-center mx-auto w-[70vw] md:top-64  md:mx-0 md:ml-20 md:w-[40vw] '>
 				<input
-					className='border-b-2 outline-none w-[75%] text-white'
+					className='border-b-2 outline-none w-[95%] text-white pb-1 bg-transperant'
 					type='text'
 					placeholder='何かを探している..?'
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
 					onKeyDown={handleKey}
 				/>
-				<button onClick={searchGoogle} className='text-white w-[5%] h-20'>
-					<FontAwesomeIcon icon='fa-brands fa-google fa-2xl' />
+				<button
+					onClick={searchGoogle}
+					className='border-b-2 text-white w-[5%] pb-1 bg-none'
+				>
+					<FontAwesomeIcon icon='fa-brands fa-google fa-2xl ' />
 				</button>
 			</div>
 		</>

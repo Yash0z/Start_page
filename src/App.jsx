@@ -1,5 +1,6 @@
 import React from "react";
 import Search from "./Components/Search";
+
 import ReactPlayer from "react-player";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { library } from "@fortawesome/fontawesome-svg-core";
@@ -9,32 +10,36 @@ import ReactPlayer from "react-player";
 function App() {
 	return (
 		<>
-			<Search />
 			<React.StrictMode>
-				{/* <ReactPlayer
-					style={{
-						margin: "0px",
-						padding: "0px", // Correctly formatted in an object
-					}}
-					url='src/assets/dune.mp4'
-					playing={true}
-					loop={true}
-					muted={true}
-					width='100vw'
-					height='100vh'
-					config={{
-						file: {
-							attributes: {
-								controlsList: "nodownload", // Hides download button on some browsers
+				<div className='w-screen h-[550px] md:w-[55vw]'>
+					<Search />
+					<ReactPlayer
+						style={{
+							margin: "0px",
+							padding: "0px",
+							position: "static",
+						}}
+						className='react-player'
+						width='100%'
+						height='100%'
+						url='src/assets/dune.mp4'
+						playing={true}
+						loop={true}
+						muted={true}
+						config={{
+							file: {
+								attributes: {
+									controlsList: "nodownload", // Hides download button on some browsers
+								},
 							},
-						},
-					}}
-				/> */}
-				<img
+						}}
+					/>
+				</div>
+				{/* <img
 					src='../src/assets/space.png'
 					alt=''
-					className='mx-auto pt-10'
-				/>
+					className='mx-auto pt-12'
+				/> */}
 			</React.StrictMode>
 		</>
 	);
