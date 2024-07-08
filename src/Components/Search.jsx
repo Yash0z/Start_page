@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaCameraRetro, FaGoogle } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
@@ -23,20 +24,26 @@ const Search = () => {
 
 	return (
 		<>
-			<div className='relative top-60 flex justify-center mx-auto w-[70vw] md:top-64  md:mx-0 md:ml-20 md:w-[40vw] '>
+			<div className='relative  flex justify-center top-44 w-[80vw] mx-auto sm:w-[70vw] md:top-44  md:mx-0 md:ml-20 md:w-[40rem] '>
 				<input
-					className='border-b-2 outline-none w-[95%] text-white pb-1 bg-transperant'
+					className='border-b-2 outline-none w-[88%] text-white pb-1 bg-transperant'
 					type='text'
-					placeholder='何かを探している..?'
+					placeholder='何 か を 探 し て い る . . . . ?'
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
 					onKeyDown={handleKey}
 				/>
 				<button
 					onClick={searchGoogle}
-					className='border-b-2 text-white w-[5%] pb-1 bg-none'
+					className='border-b-2 text-white w-[10%] sm:w-[6%] md:w-[5%] pb-1  '
 				>
-					<FontAwesomeIcon icon='fa-brands fa-google fa-2xl ' />
+					<FaGoogle className='ml-2' />
+				</button>
+				<button
+					onClick={searchGoogle}
+					className='border-b-2 text-white w-[10%] sm:w-[6%] md:w-[5%] pb-1 '
+				>
+					<FaCameraRetro className='ml-2' />
 				</button>
 			</div>
 		</>
