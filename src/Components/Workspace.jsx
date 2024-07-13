@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Card from "./Card";
-
+import { FiEdit } from "react-icons/fi";
 const Workspace = () => {
 	// Array of unique props for each Card
 	const cardsData = [
@@ -41,8 +41,13 @@ const Workspace = () => {
 	return (
 		<div className='relative flex flex-col border h-[20%] w-[90vw] md:max-w-screen-xl md:max-h-32 mx-auto m-5 p-4 md:flex-row md:justify-between'>
 			{/* shortcuts Group name */}
-			<div className='border-2 border-red-500 my-auto h-[60%] w-[40%] md:w-[20%]'>
-				<span>text sample 1</span>
+			<div className='flex justify-between relative border-2 border-red-500 my-auto h-[60%] w-[40%] md:w-[20%]'>
+				<span className=' w-[80%]  text-white h-full text-center content-center'>
+					Academics
+				</span>
+				<button className=' w-[20%] h-full  text-white'>
+					<FiEdit className='ml-2' size={25} />
+				</button>
 			</div>
 
 			{/* shortcuts */}
