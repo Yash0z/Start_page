@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Card from "./Card";
-import { FiEdit } from "react-icons/fi";
+import { RiEdit2Fill } from "react-icons/ri";
 const Workspace = () => {
 	// Array of unique props for each Card
 	const cardsData = [
@@ -24,10 +24,10 @@ const Workspace = () => {
 
 			if (event.deltaY < 0) {
 				// Scroll up, scroll right
-				container.scrollLeft += 50;
+				container.scrollLeft += 5;
 			} else {
 				// Scroll down, scroll left
-				container.scrollLeft -= 50;
+				container.scrollLeft -= 5;
 			}
 		};
 
@@ -39,24 +39,24 @@ const Workspace = () => {
 	}, []);
 
 	return (
-		<div className='relative flex flex-col border h-[20%] w-[90vw] md:max-w-screen-xl md:max-h-32 mx-auto m-5 p-4 md:flex-row md:justify-between'>
+		<div className=' relative  top-32  flex flex-col h-[15%] w-[90vw] md:max-w-screen-2xl mt-2 md:max-h-32 mx-auto  md:flex-row md:justify-around md:items-center'>
 			{/* shortcuts Group name */}
-			<div className='flex justify-between relative border-2 border-red-500 my-auto h-[60%] w-[40%] md:w-[20%]'>
-				<span className=' w-[80%]  text-white h-full text-center content-center'>
+			<div className='flex justify-between relative  my-auto h-12 w-20 min-w-56 border-2 '>
+				<span className='  bg-yellow-400 font-Questrial text-2xl w-[80%] h-full text-center  content-center'>
 					Academics
 				</span>
-				<button className=' w-[20%] h-full  text-white'>
-					<FiEdit className='ml-2' size={25} />
+				<button className=' w-[20%] h-full bg-yellow-400 '>
+					<RiEdit2Fill className='ml-2 bg-yellow-400' size={20} />
 				</button>
 			</div>
 
 			{/* shortcuts */}
 			<div
-				className='border-2 flex-wrap flex-col flex space-x-7 border-red-500 p-3 my-auto h-[100%] md:h-[80%] w-[100%] overflow-x-auto md:w-[75%] custom-scrollbar'
+				className='  flex  space-x-7 p-2 items-center h-[100%] md:h-[100%] w-[100%] overflow-x-auto md:w-[75%] custom-scrollbar'
 				ref={containerRef}
 			>
 				{cardsData.map((item) => (
-					<div key={item.id} className='border w-52 h-10'>
+					<div key={item.id} className='border min-w-64 h-10'>
 						<Card {...item} />
 					</div>
 				))}
