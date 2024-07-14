@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import { FaCameraRetro, FaGoogle } from "react-icons/fa";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faGoogle } from "@fortawesome/free-brands-svg-icons";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faMagnifyingGlass, faGoogle);
 const Search = () => {
 	const [query, setQuery] = useState("");
 
