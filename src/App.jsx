@@ -1,9 +1,7 @@
 import { React, useState } from "react";
 import Search from "./Components/Search";
 import Popup from "./Components/Popup";
-import Divider from "@mui/material/Divider";
 import Workspace from "./Components/Workspace";
-
 
 function App() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -23,11 +21,12 @@ function App() {
 	];
 	return (
 		<>
-			<div className=' w-screen h-[39vh]'>
-				<Search />
+			<div className='relative w-screen h-[39vh]'>
+				<div className=' absolute w-full text-center top-20 font-Montserrat text-[100px] font-extrabold text-yellow-400 '>
+					スペースウ
+				</div>
+				<Search className='absolute inset-0 m-auto' />
 			</div>
-
-			<Divider className='bg-gray-500' />
 
 			<div className=' w-screen h-[60vh]'>
 				<Workspace cards={cardsData} isOpen={togglePopup} />
