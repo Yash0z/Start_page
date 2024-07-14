@@ -3,13 +3,14 @@ import Search from "./Components/Search";
 import Popup from "./Components/Popup";
 import Divider from "@mui/material/Divider";
 import Workspace from "./Components/Workspace";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { library } from "@fortawesome/fontawesome-svg-core";
-// import { faGuitar } from "@fortawesome/free-solid-svg-icons";
 
-// library.add(faGuitar);
+
 function App() {
-	const [isOpen, setIsOpen] = useState(true);
+	const [isOpen, setIsOpen] = useState(false);
+	const togglePopup = () => {
+		setIsOpen(!isOpen);
+	};
+
 	const cardsData = [
 		{ id: 1, title: "Card 1", link: "https://github.com/" },
 		{ id: 2, title: "Card 2", link: "Content for Card 2" },
@@ -29,8 +30,8 @@ function App() {
 			<Divider className='bg-gray-500' />
 
 			<div className=' w-screen h-[60vh]'>
-				<Workspace cards={cardsData} />
-				<Workspace cards={cardsData} />
+				<Workspace cards={cardsData} isOpen={togglePopup} />
+				<Workspace cards={cardsData} isOpen={togglePopup} />
 			</div>
 			{isOpen && <Popup />}
 		</>

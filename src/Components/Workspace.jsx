@@ -1,9 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import Card from "./Card";
 import { RiEdit2Fill } from "react-icons/ri";
-const Workspace = ({ cards }) => {
-	// Array of unique props for each Card
 
+const Workspace = ({ cards, isOpen }) => {
 	// scrollbar behaviour
 	const containerRef = useRef(null);
 	useEffect(() => {
@@ -35,7 +34,7 @@ const Workspace = ({ cards }) => {
 				<span className='  bg-yellow-400 font-Questrial text-2xl w-[80%] h-full text-center  content-center'>
 					Academics
 				</span>
-				<button className=' w-[20%] h-full bg-yellow-400 '>
+				<button className=' w-[20%] h-full bg-yellow-400 ' onClick={isOpen}>
 					<RiEdit2Fill className='ml-2 bg-yellow-400' size={20} />
 				</button>
 			</div>
