@@ -1,5 +1,6 @@
-import React from "react";
+import { React, useState } from "react";
 import Search from "./Components/Search";
+import Popup from "./Components/Popup";
 import Divider from "@mui/material/Divider";
 import Workspace from "./Components/Workspace";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,6 +9,7 @@ import Workspace from "./Components/Workspace";
 
 // library.add(faGuitar);
 function App() {
+	const [isOpen, setIsOpen] = useState(true);
 	const cardsData = [
 		{ id: 1, title: "Card 1", link: "https://github.com/" },
 		{ id: 2, title: "Card 2", link: "Content for Card 2" },
@@ -30,6 +32,7 @@ function App() {
 				<Workspace cards={cardsData} />
 				<Workspace cards={cardsData} />
 			</div>
+			{isOpen && <Popup />}
 		</>
 	);
 }
