@@ -30,8 +30,8 @@ const Workspace = ({ cards, isOpen }) => {
 	return (
 		<div className=' relative  top-32  flex flex-col h-[15%] w-[90vw] md:max-w-screen-2xl mt-2 md:max-h-32 mx-auto  md:flex-row md:justify-around md:items-center'>
 			{/* shortcuts Group name */}
-			<div className='flex justify-between relative  my-auto h-12 w-20 min-w-56 border-2 '>
-				<span className='  bg-yellow-400 font-Questrial text-2xl w-[80%] h-full text-center  content-center'>
+			<div className='flex justify-between relative  my-auto h-12 w-20 min-w-52 border-2 '>
+				<span className='  bg-yellow-400  text-xl w-[80%] h-full text-center  content-center'>
 					Academics
 				</span>
 				<button className=' w-[20%] h-full bg-yellow-400 ' onClick={isOpen}>

@@ -19,11 +19,11 @@ const Search = () => {
 
 	return (
 		<>
-			<div className='relative  flex justify-center top-44 w-[80vw] mx-auto sm:w-[70vw] md:top-44  md:mx-0 md:ml-20 md:w-[40rem] '>
+			<div className='relative  flex justify-center top-44  mx-auto  p-5  max-w-[40rem]    '>
 				<input
 					className='border-b-2 outline-none w-[88%] text-white pb-1 bg-transperant'
 					type='text'
-					placeholder='何 か を 探 し て い る . . . . ?'
+					placeholder='Search Something'
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
 					onKeyDown={handleKey}
@@ -31,12 +31,14 @@ const Search = () => {
 				<button
 					onClick={searchGoogle}
 					className='border-b-2 text-white w-[10%] sm:w-[6%] md:w-[5%] pb-1  '
+					aria-label='Search Google'
 				>
 					<FaGoogle className='ml-2' />
 				</button>
 				<button
 					onClick={searchGoogle}
 					className='border-b-2 text-white w-[10%] sm:w-[6%] md:w-[5%] pb-1 '
+					aria-label='Search Camera'
 				>
 					<FaCameraRetro className='ml-2' />
 				</button>
