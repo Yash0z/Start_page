@@ -1,14 +1,47 @@
-export const cardsData1 = [
-   { id: 1, title: "Card 1", link: "https://github.com/" },
-   { id: 2, title: "Card 2", link: "Content for Card 2" },
+export let cardsData1 = JSON.parse(localStorage.getItem('cardsData1')) || [
+
 ];
 
-export const cardsData2 = [
-   { id: 1, title: "Card 3", link: "Content for Card 3" },
-   { id: 2, title: "Card 4", link: "Content for Card 4" },
+export let cardsData2 = JSON.parse(localStorage.getItem('cardsData2')) || [
+
 ];
 
-export const cardsData3 = [
-   { id: 1, title: "Card 5", link: "Content for Card 5" },
-   { id: 2, title: "Card 6", link: "Content for Card 6" },
+export let cardsData3 = JSON.parse(localStorage.getItem('cardsData3')) || [
+
 ];
+
+// Function to add a new card to cardsData1
+export function addCardToData1(title, link) {
+   const newCard = {
+      id: cardsData1.length + 1,
+      title: title,
+      link: link,
+   };
+
+   cardsData1.push(newCard);
+   localStorage.setItem('cardsData1', JSON.stringify(cardsData1));
+}
+
+// Function to add a new card to cardsData2
+export function addCardToData2(title, link) {
+   const newCard = {
+      id: cardsData2.length + 1,
+      title: title,
+      link: link,
+   };
+
+   cardsData2.push(newCard);
+   localStorage.setItem('cardsData2', JSON.stringify(cardsData2));
+}
+
+// Function to add a new card to cardsData3
+export function addCardToData3(title, link) {
+   const newCard = {
+      id: cardsData3.length + 1,
+      title: title,
+      link: link,
+   };
+
+   cardsData3.push(newCard);
+   localStorage.setItem('cardsData3', JSON.stringify(cardsData3));
+}

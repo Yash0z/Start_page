@@ -1,7 +1,14 @@
 import { React, useState } from "react";
+import { MdAddBox } from "@react-icons/all-files/md/MdAddBox";
 import Search from "./Components/Search";
 import Popup from "./Components/Popup";
 import Workspace from "./Components/Workspace";
+import { cardsData1, cardsData2, cardsData3 } from "./Components/CardData.js";
+import {
+	addCardToData1,
+	addCardToData2,
+	addCardToData3,
+} from "./Components/CardData.js";
 
 function App() {
 	const [isOpen, setIsOpen] = useState(false);
@@ -9,16 +16,28 @@ function App() {
 		setIsOpen(!isOpen);
 	};
 
-	const cardsData = [
-		{ id: 1, title: "Card 1", link: "https://github.com/" },
-		{ id: 2, title: "Card 2", link: "Content for Card 2" },
-		{ id: 3, title: "Card 3", link: "Content for Card 3" },
-		{ id: 4, title: "Card 4", link: "Content for Card 4" },
-		{ id: 5, title: "Card 5", link: "Content for Card 5" },
-		{ id: 6, title: "Card 6", link: "Content for Card 6" },
-		{ id: 7, title: "Card 7", link: "Content for Card 7" },
-		{ id: 8, title: "Card 8", link: "Content for Card 8" },
-	];
+	const [data1, setData1] = useState(cardsData1);
+	const [data2, setData2] = useState(cardsData2);
+	const [data3, setData3] = useState(cardsData3);
+
+	const addCard = (title, link, workspace) => {
+		switch (workspace) {
+			case "data1":
+				addCardToData1(title, link);
+				setData1([...cardsData1]);
+				break;
+			case "data2":
+				addCardToData2(title, link);
+				setData2([...cardsData2]);
+				break;
+			case "data3":
+				addCardToData3(title, link);
+				setData3([...cardsData3]);
+				break;
+			default:
+				break;
+		}
+	};
 	return (
 		<>
 			<div className='relative w-screen h-[39vh]'>
@@ -29,11 +48,17 @@ function App() {
 			</div>
 
 			<div className=' w-screen h-[60vh]'>
-				<Workspace cards={cardsData} isOpen={togglePopup} />
-				<Workspace cards={cardsData} isOpen={togglePopup} />
-				<Workspace cards={cardsData} isOpen={togglePopup} />
+				<Workspace cards={data1} />
+				<Workspace cards={data2} />
+				<Workspace cards={data3} />
+				<button
+					className=' p-1 rounded-full absolute bottom-5 right-5'
+					onClick={togglePopup}
+				>
+					<MdAddBox size={30} className='bg-transparent text-yellow-400' />
+				</button>
 			</div>
-			{isOpen && <Popup isOpen={togglePopup} />}
+			{isOpen && <Popup isOpen={togglePopup} addCard={addCard} />}
 		</>
 	);
 }
