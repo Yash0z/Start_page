@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { FaCameraRetro, FaGoogle } from "react-icons/fa";
-
+import { FaCameraRetro } from "@react-icons/all-files/fa/FaCameraRetro";
+import { FaGoogle } from "@react-icons/all-files/fa/FaGoogle";
 const Search = () => {
 	const [query, setQuery] = useState("");
 
@@ -40,7 +40,7 @@ const Search = () => {
 					className='border-b-2 text-yellow-400 w-[10%] sm:w-[6%] md:w-[5%] pb-2  '
 					aria-label='Search Camera'
 				>
-					<FaCameraRetro className='ml-2' size={20}/>
+					<FaCameraRetro className='ml-2' size={20} />
 				</button>
 			</div>
 		</>

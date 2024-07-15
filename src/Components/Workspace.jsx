@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Card from "./Card";
-import { RiEdit2Fill } from "react-icons/ri";
+import { RiEdit2Fill } from "@react-icons/all-files/ri/RiEdit2Fill";
 
 const Workspace = ({ cards, isOpen }) => {
 	// scrollbar behaviour
