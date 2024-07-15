@@ -31,8 +31,9 @@ function App() {
 			<div className=' w-screen h-[60vh]'>
 				<Workspace cards={cardsData} isOpen={togglePopup} />
 				<Workspace cards={cardsData} isOpen={togglePopup} />
+				<Workspace cards={cardsData} isOpen={togglePopup} />
 			</div>
-			{isOpen && <Popup />}
+			{isOpen && <Popup isOpen={togglePopup} />}
 		</>
 	);
 }
