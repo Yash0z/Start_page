@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Card from "./Card";
 import { RiEdit2Fill } from "@react-icons/all-files/ri/RiEdit2Fill";
 
-const Workspace = ({ cards, isOpen }) => {
+const Workspace = ({ cards}) => {
 	// scrollbar behaviour
 	const containerRef = useRef(null);
 	useEffect(() => {
@@ -34,7 +34,7 @@ const Workspace = ({ cards, isOpen }) => {
 				<span className='  bg-yellow-400  text-xl w-[80%] h-full text-center  content-center'>
 					Academics
 				</span>
-				<button className=' w-[20%] h-full bg-yellow-400 ' onClick={isOpen}>
+				<button className=' w-[20%] h-full bg-yellow-400 '>
 					<RiEdit2Fill className='ml-2 bg-yellow-400' size={20} />
 				</button>
 			</div>
