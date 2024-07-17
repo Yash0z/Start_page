@@ -74,16 +74,20 @@ function App() {
 				<Workspace
 					cards={data1}
 					onDelete={(id) => deleteCard(id, "data1")}
+					workspaceId='workspace1'
 				/>
 				<Workspace
 					cards={data2}
 					onDelete={(id) => deleteCard(id, "data2")}
+					workspaceId='workspace2'
 				/>
 				<Workspace
 					cards={data3}
 					onDelete={(id) => deleteCard(id, "data3")}
+					workspaceId='workspace3'
 				/>
 				<button
+					aria-label='addShortcut'
 					className='p-1 rounded-full absolute bottom-5 right-5'
 					onClick={togglePopup}
 				>
