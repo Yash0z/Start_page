@@ -1,65 +1,44 @@
-import React, { useState } from "react";
+import React from "react";
 import { MdAddBox } from "@react-icons/all-files/md/MdAddBox";
 import Search from "./Components/Search";
 import Popup from "./Components/Popup";
 import Workspace from "./Components/Workspace";
-import { cardsData1, cardsData2, cardsData3 } from "./Components/CardData.js";
-import {
-	addCardToData1,
-	addCardToData2,
-	addCardToData3,
-	deleteCardFromData1,
-	deleteCardFromData2,
-	deleteCardFromData3,
-} from "./Components/CardData.js";
+import { useCardsData } from "./hooks/useCardsData";
+import { usePopup } from "./hooks/usePopup";
+import { addCardHandler, deleteCardHandler } from "./utils/cardHandlers";
 
 function App() {
-	const [isOpen, setIsOpen] = useState(false);
-	const togglePopup = () => {
-		setIsOpen(!isOpen);
-	};
+	const {
+		cards: data1,
+		addCard: addCardToData1,
+		deleteCard: deleteCardFromData1,
+	} = useCardsData("cardsData1");
+	const {
+		cards: data2,
+		addCard: addCardToData2,
+		deleteCard: deleteCardFromData2,
+	} = useCardsData("cardsData2");
+	const {
+		cards: data3,
+		addCard: addCardToData3,
+		deleteCard: deleteCardFromData3,
+	} = useCardsData("cardsData3");
 
-	const [data1, setData1] = useState(cardsData1);
-	const [data2, setData2] = useState(cardsData2);
-	const [data3, setData3] = useState(cardsData3);
+	const { isOpen, togglePopup } = usePopup();
 
-	const addCard = (title, link, workspace) => {
-		switch (workspace) {
-			case "data1":
-				addCardToData1(title, link);
-				setData1([...cardsData1]);
-				break;
-			case "data2":
-				addCardToData2(title, link);
-				setData2([...cardsData2]);
-				break;
-			case "data3":
-				addCardToData3(title, link);
-				setData3([...cardsData3]);
-				break;
-			default:
-				break;
-		}
-	};
+	const addCard = (title, link, workspace) =>
+		addCardHandler(title, link, workspace, {
+			addCardToData1,
+			addCardToData2,
+			addCardToData3,
+		});
 
-	const deleteCard = (id, workspace) => {
-		switch (workspace) {
-			case "data1":
-				deleteCardFromData1(id);
-				setData1([...cardsData1]);
-				break;
-			case "data2":
-				deleteCardFromData2(id);
-				setData2([...cardsData2]);
-				break;
-			case "data3":
-				deleteCardFromData3(id);
-				setData3([...cardsData3]);
-				break;
-			default:
-				break;
-		}
-	};
+	const deleteCard = (id, workspace) =>
+		deleteCardHandler(id, workspace, {
+			deleteCardFromData1,
+			deleteCardFromData2,
+			deleteCardFromData3,
+		});
 
 	return (
 		<>
