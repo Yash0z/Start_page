@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Divider from "@mui/material/Divider";
 
 const Popup = ({ addCard, isOpen }) => {
 	const [name, setName] = useState("");
@@ -84,7 +83,7 @@ const Popup = ({ addCard, isOpen }) => {
 							</div>
 						</label>
 					</div>
-					<Divider className='bg-gray-500 w-full' />
+
 					{/* Submit and Cancel buttons */}
 					<div className='flex justify-end gap-2 h-10 top-5 relative text-black'>
 						<button
