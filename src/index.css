@@ -3,12 +3,70 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+/* FONTS */
+
+@layer base {
+   @font-face {
+      font-family: 'Euclid_re';
+      font-display: swap;
+      src: url('./assets/fonts/Euclid_reg.woff2') format('woff2');
+   }
+
+   @font-face {
+      font-family: 'Euclid_li';
+      font-display: swap;
+      src: url('./assets/fonts/Euclid_Light.woff2') format('woff2');
+   }
+
+   @font-face {
+      font-family: 'Helvetica_re';
+      font-display: swap;
+      src: url('./assets/fonts/Helvetica_re.woff2') format('woff2');
+   }
+
+   @font-face {
+      font-family: 'Helvetica_li';
+      font-display: swap;
+      src: url('./assets/fonts/Helvetica_light.woff2') format('woff2');
+   }
+
+
+   @font-face {
+      font-family: 'Noto_JP';
+      font-display: swap;
+      src: url('./assets/fonts/NotoSansJP_reg.woff2') format('woff2');
+   }
+
+   @font-face {
+      font-family: 'PlaywriteEN';
+      font-display: swap;
+      src: url('./assets/fonts/PlaywriteEN_reg.woff2') format('woff2');
+   }
+
+   @font-face {
+      font-family: 'PlaywriteIN_re';
+      font-display: swap;
+      src: url('./assets/fonts/PlaywriteIN_reg.woff2') format('woff2');
+   }
+
+   @font-face {
+      font-family: 'Montserrat_Black';
+      font-display: swap;
+      src: url('./assets/fonts/Montserrat_Black.woff2') format('woff2');
+   }
+}
+
+
+
+
 * {
    background-color: rgb(10, 10, 19);
 }
 
 /* default scrollbar  */
- .custom-scrollbar {
+.custom-scrollbar {
    scrollbar-width: none;
    /* Firefox */
    -ms-overflow-style: none;

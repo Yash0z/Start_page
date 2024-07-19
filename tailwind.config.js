@@ -5,6 +5,15 @@ module.exports = withMT({
    theme: {
       extend: {
          fontFamily: {
+            Euclid_re: ['Euclid_re'],
+            Euclid_re: ['Euclid_li'],
+            Noto_JP:['Noto_JP'],
+            Helvetica_li:['Helvetica_li'],
+            PlaywriteEN: ['PlaywriteEN'],
+            Montserrat_Black: ['Montserrat_Black'],
+            PlaywriteIN_re:['PlaywriteIN_re'],
+            Helvetica_re:['Helvetica_re'],
+
             Montserrat: ["Montserrat"],
             Raleway: ["Raleway"],
             PlayfairDisplay: ["Playfair Display"],
