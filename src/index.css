@@ -31,6 +31,7 @@
       font-display: swap;
       src: url('/Public/assets/fonts/PlaywriteEN_reg.woff2') format('woff2');
    }
+
    @font-face {
       font-family: 'raleway_re';
       font-display: swap;
@@ -54,8 +55,9 @@
 
 
 * {
-   background-color: rgb(10, 10, 19);
+   background-color: rgba(var(--background));
 }
+
 
 /* default scrollbar  */
 .custom-scrollbar {
@@ -69,4 +71,14 @@
 .custom-scrollbar::-webkit-scrollbar {
    display: none;
    /* Chrome, Safari, Opera */
+}
+
+:root {
+   --background: 9, 9, 22,1;
+   --accent-1: 119, 67, 219;
+   --accent-2: 170, 122, 183;
+   --accent-3: 63, 114, 175;
+   --text-clr1: 0, 0, 0;
+   --text-clr2: 0, 0, 0;
+   --filled: 181, 192, 208;
 }

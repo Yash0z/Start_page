@@ -21,7 +21,17 @@ module.exports = withMT({
             Questrial: ["Questrial"],
             OpenSans: ["Open Sans"],
          },
-         typography: {
+         colors: {
+            background: 'rgba(var(--background))',
+            active: 'rgba(var(--active))',
+            filled: 'rgba(var(--filled))',
+            accent1: 'rgba(var(--accent-1))',
+            accent2: 'rgba(var(--accent-2))',
+            accent3: 'rgba(var(--accent-3))',
+            textclr1: 'rgba(var(--text-clr1))',
+            textclr2: 'rgba(var(--text-clr2))',
+         },
+         typoraphy: {
             DEFAULT: {
                css: {
                   "*": {
