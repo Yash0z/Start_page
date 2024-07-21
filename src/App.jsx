@@ -1,5 +1,5 @@
 import React from "react";
-import { MdAddBox } from "@react-icons/all-files/md/MdAddBox";
+import { MdAdd } from "@react-icons/all-files/md/MdAdd";
 import Search from "./Components/Search";
 import Popup from "./Components/Popup";
 import Workspace from "./Components/Workspace";
@@ -43,8 +43,8 @@ function App() {
 	return (
 		<>
 			<div className='relative w-screen h-[39vh]'>
-				<div className='absolute w-full text-center top-20 font-Montserrat text-[100px] font-extrabold text-yellow-400 '>
-					スペースウ
+				<div className='absolute w-full text-center top-20 font-Noto_JP text-[100px] text-accent1 '>
+					グーグル
 				</div>
 				<Search className='absolute inset-0 m-auto' />
 			</div>
@@ -67,10 +67,10 @@ function App() {
 				/>
 				<button
 					aria-label='addShortcut'
-					className='p-1 rounded-full absolute bottom-5 right-5'
+					className='p-2 rounded-full absolute bottom-5 right-5 bg-accent2 flex justify-between items-center'
 					onClick={togglePopup}
 				>
-					<MdAddBox size={30} className='bg-transparent text-yellow-400' />
+					<MdAdd size={20} className='bg-transparent  rounded-full ' />
 				</button>
 			</div>
 			{isOpen && <Popup isOpen={togglePopup} addCard={addCard} />}

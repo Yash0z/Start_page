@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { RiEdit2Fill } from "@react-icons/all-files/ri/RiEdit2Fill";
+import { RiFileEditLine } from "@react-icons/all-files/ri/RiFileEditLine";
 
 const GroupNameEditor = ({ initialName, workspaceId }) => {
   const [groupName, setGroupName] = useState(initialName);
@@ -23,22 +23,22 @@ const GroupNameEditor = ({ initialName, workspaceId }) => {
   };
 
   return (
-    <div className='flex justify-between relative my-auto h-12 w-20 min-w-52 border-2'>
+    <div className='flex justify-between relative my-auto h-24 md:h-12 w-20 min-w-52 gap-2'>
       <div
         ref={nameRef}
         contentEditable={isEditing}
         suppressContentEditableWarning={true}
-        className='bg-yellow-400 text-xl w-[80%] h-full text-center content-center outline-none'
+        className='bg-accent2 text-textclr1 font-PlaywriteEN text-xl w-[80%] h-full text-center content-center outline-none rounded-md'
         onBlur={handleNameChange}
       >
         {groupName}
       </div>
       <button
         aria-label='editGroup'
-        className='w-[20%] h-full bg-yellow-400'
+        className='w-[20%] h-full bg-accent2 rounded-md content-center flex justify-center items-center'
         onClick={toggleEditMode}
       >
-        <RiEdit2Fill className='ml-2 bg-yellow-400' size={20} />
+        <RiFileEditLine className=' bg-transparent text-textclr1' size={20} />
       </button>
     </div>
   );

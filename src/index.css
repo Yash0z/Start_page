@@ -74,11 +74,11 @@
 }
 
 :root {
-   --background: 9, 9, 22,1;
-   --accent-1: 119, 67, 219;
-   --accent-2: 170, 122, 183;
+   --background: 9, 9, 22, 1;
+   --accent-1: 255, 38, 89;
+   --accent-2: 204, 255, 145;
    --accent-3: 63, 114, 175;
    --text-clr1: 0, 0, 0;
-   --text-clr2: 0, 0, 0;
-   --filled: 181, 192, 208;
+   --text-clr2: 255, 255, 255;
+   --filled: 17, 22, 41;
 }

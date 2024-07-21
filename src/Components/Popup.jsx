@@ -31,48 +31,48 @@ const Popup = ({ addCard, isOpen }) => {
 	return (
 		<>
 			<div className='fixed inset-0 bg-black bg-opacity-90 '>
-				<div className='text-white relative top-10 p-4 mx-auto w-[40rem] h-[23rem]'>
-					<div className='flex flex-col gap-5 p-5 font-Raleway'>
+				<div className='text-white relative top-10 p-4 mx-auto w-[40rem] h-[19rem] '>
+					<div className='flex flex-col gap-5 p-5 font-Euclid_re text-xl text-accent2 '>
 						{/* Name input */}
-						<label>
-							<span className='text-lg font-Montserrat text-yellow-400 p-1'>
-								Name
+						<label className="flex p-2 items-center gap-5 ">
+							<span>
+								Title
 							</span>
 							<div>
 								<input
 									type='text'
-									className='bg-gray-900 p-2 rounded-sm w-[70%] outline-none'
+									className='bg-filled p-2 text-textclr2 text-sm rounded-sm w-[30rem] outline-none'
 									value={name}
 									onChange={handleNameChange}
-									placeholder='Enter a title'
+									placeholder='enter a title'
 								/>
 							</div>
 						</label>
 
 						{/* URL input */}
-						<label>
-							<span className='textlg font-Montserrat text-yellow-400 p-1'>
+						<label className="flex p-2 items-center gap-5 ">
+							<span >
 								URL
 							</span>
 							<div>
 								<input
 									type='text'
-									className='bg-gray-900 p-2 rounded-sm w-[70%] outline-none'
+									className='bg-filled p-2 text-textclr2 text-sm rounded-sm w-[30rem] outline-none'
 									value={url}
 									onChange={handleUrlChange}
-									placeholder='Enter a url'
+									placeholder='enter a url'
 								/>
 							</div>
 						</label>
 
 						{/* Workspace select */}
-						<label>
-							<span className='textlg font-Montserrat text-yellow-400 p-1'>
+						<label className="flex p-2  items-center gap-5 ">
+							<span >
 								Workspace
 							</span>
 							<div>
 								<select
-									className='bg-gray-900 p-2 rounded-sm w-[70%] outline-none'
+									className='bg-filled p-2 text-textclr2 text-sm rounded-sm w-[20rem] outline-none'
 									value={selectedWorkspace}
 									onChange={handleWorkspaceChange}
 								>
@@ -85,16 +85,16 @@ const Popup = ({ addCard, isOpen }) => {
 					</div>
 
 					{/* Submit and Cancel buttons */}
-					<div className='flex justify-end gap-2 h-10 top-5 relative text-black'>
+					<div className='flex justify-end gap-2 h-10 bg-transparent relative text-black'>
 						<button
 							onClick={handleClose}
-							className='bg-slate-300 px-3 rounded-sm'
+							className='bg-accent1 px-3 rounded-sm'
 						>
 							Cancel
 						</button>
 						<button
 							onClick={handleSubmit}
-							className='bg-yellow-400 px-3 rounded-sm'
+							className='bg-accent2 px-3 rounded-sm'
 						>
 							Save
 						</button>

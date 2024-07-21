@@ -23,14 +23,14 @@ const Card = ({ id, title, link, onDelete }) => {
 			{isVisible ? (
 				<div
 					onContextMenu={handleContextMenu}
-					className='font-Questrial text-xl rounded-sm  text-white border text-center  font-bold card-container relative h-full w-full'
+					className='font-Euclid_li text-xl rounded-sm border-y border-accent1 text-white text-center card-container relative h-full w-full'
 				>
 					<a href={link} className=' content-center block w-full h-full'>
-						~ {title}
+						 {title}
 					</a>
 				</div>
 			) : (
-				<div className='flex justify-center gap-2 text-yellow-400 border w-full h-full '>
+				<div className='flex justify-center gap-2 text-accent2 border-y border-accent1 w-full h-full '>
 					<button onClick={handleDeleteClick} aria-label='Delete'>
 						<RiDeleteBin6Fill size={20} />
 					</button>
