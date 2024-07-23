@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Select, Option } from "@material-tailwind/react";
 const Popup = ({ addCard, isOpen }) => {
 	const [name, setName] = useState("");
 	const [url, setUrl] = useState("");
@@ -31,7 +31,7 @@ const Popup = ({ addCard, isOpen }) => {
 	return (
 		<>
 			<div className='fixed inset-0 bg-black bg-opacity-90 '>
-				<div className='text-white relative top-10 p-4 mx-auto w-[40rem] h-[19rem] '>
+				<div className='text-white relative top-10 flex flex-col items-center mx-auto w-[40rem] h-[19rem] '>
 					<div className='flex flex-col gap-5 p-5 font-Euclid_re text-xl text-accent2 '>
 						{/* Name input */}
 						<label className="flex p-2 items-center gap-5 ">
@@ -41,7 +41,7 @@ const Popup = ({ addCard, isOpen }) => {
 							<div>
 								<input
 									type='text'
-									className='bg-filled p-2 text-textclr2 text-sm rounded-sm w-[30rem] outline-none'
+									className='bg-filled p-2 text-textclr2 text-sm rounded-sm w-[31rem] outline-none'
 									value={name}
 									onChange={handleNameChange}
 									placeholder='enter a title'
@@ -57,7 +57,7 @@ const Popup = ({ addCard, isOpen }) => {
 							<div>
 								<input
 									type='text'
-									className='bg-filled p-2 text-textclr2 text-sm rounded-sm w-[30rem] outline-none'
+									className='bg-filled p-2 text-textclr2 text-sm rounded-sm w-[31rem] outline-none'
 									value={url}
 									onChange={handleUrlChange}
 									placeholder='enter a url'
@@ -66,26 +66,29 @@ const Popup = ({ addCard, isOpen }) => {
 						</label>
 
 						{/* Workspace select */}
-						<label className="flex p-2  items-center gap-5 ">
+						<label className=" p-2 flex  flex-col gap-1 w-[45%]  ">
 							<span >
 								Workspace
 							</span>
 							<div>
-								<select
-									className='bg-filled p-2 text-textclr2 text-sm rounded-sm w-[20rem] outline-none'
+								<Select
+                        variant="standard"
+                            
+                            placeholder={"select"}
+									className='z-10 absolute  border-accent2   text-textclr2 text-sm  w-[15rem]   '
 									value={selectedWorkspace}
 									onChange={handleWorkspaceChange}
 								>
-									<option value='data1'>Workspace 1</option>
-									<option value='data2'>Workspace 2</option>
-									<option value='data3'>Workspace 3</option>
-								</select>
+									<Option value='data1'>Workspace 1</Option>
+									<Option value='data2'>Workspace 2</Option>
+									<Option value='data3'>Workspace 3</Option>
+								</Select>
 							</div>
 						</label>
 					</div>
 
 					{/* Submit and Cancel buttons */}
-					<div className='flex justify-end gap-2 h-10 bg-transparent relative text-black'>
+					<div className='flex justify-end gap-2 h-10 bg-transparent   w-full px-12 absolute bottom-14 text-black'>
 						<button
 							onClick={handleClose}
 							className='bg-accent1 px-3 rounded-sm'
