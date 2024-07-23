@@ -19,9 +19,9 @@ const Search = () => {
 
 	return (
 		<>
-			<div className='relative  flex justify-center top-72  mx-auto  p-5 max-w-[45rem] bg-transparent    '>
+			<div className='relative  flex justify-center top-60  mx-auto  p-5 max-w-[35rem] bg-transparent    '>
 				<input
-					className='font-Euclid_re  text-lg border-b-2 outline-none w-[88%] text-white pb-2 bg-transparent'
+					className='font-Euclid_re  text-md border-b-2 outline-none w-[88%] text-white pb-2 bg-transparent'
 					type='text'
 					placeholder='Search Something'
 					value={query}
@@ -33,14 +33,14 @@ const Search = () => {
 					className='border-b-2 text-accent2 w-[10%] sm:w-[6%] md:w-[5%] pb-2  '
 					aria-label='Search Google'
 				>
-					<FaGoogle className='ml-2' size={20} />
+					<FaGoogle className='ml-2' size={17} />
 				</button>
 				<button
 					onClick={searchGoogle}
 					className='border-b-2 text-accent2 w-[10%] sm:w-[6%] md:w-[5%] pb-2  '
 					aria-label='Search Camera'
 				>
-					<FaCameraRetro className='ml-2' size={20} />
+					<FaCameraRetro className='ml-2' size={17} />
 				</button>
 			</div>
 		</>
