@@ -23,16 +23,18 @@ const GroupNameEditor = ({ initialName, workspaceId }) => {
   };
 
   return (
-    <div className='flex justify-between relative my-auto h-24 md:h-12 w-20 min-w-52 gap-2'>
+    <div className='flex justify-between items-center relative my-auto h-24 md:h-12 w-20 min-w-52 gap-2'>
       <div
-        ref={nameRef}
-        contentEditable={isEditing}
-        suppressContentEditableWarning={true}
-        className='bg-accent2 text-textclr1 font-PlaywriteEN text-xl w-[80%] h-full text-center content-center outline-none rounded-md'
-        onBlur={handleNameChange}
-      >
-        {groupName}
-      </div>
+  ref={nameRef}
+  contentEditable={isEditing}
+  suppressContentEditableWarning={true}
+  className='flex flex-col justify-center items-center bg-accent2 text-textclr1 font-PlaywriteEN text-xl w-[80%] h-full outline-none rounded-md'
+  onBlur={handleNameChange}
+  style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+>
+  {groupName}
+</div>
+
       <button
         aria-label='editGroup'
         className='w-[20%] h-full bg-accent2 rounded-md content-center flex justify-center items-center'
