@@ -12,14 +12,6 @@ module.exports = withMT({
             PlaywriteEN: ['PlaywriteEN'],
             Montserrat_Black: ['Montserrat_Black'],
             PlaywriteIN_re: ['PlaywriteIN_re'],
-
-
-            Montserrat: ["Montserrat"],
-            Raleway: ["Raleway"],
-            PlayfairDisplay: ["Playfair Display"],
-            Poppins: ["Poppins"],
-            Questrial: ["Questrial"],
-            OpenSans: ["Open Sans"],
          },
          colors: {
             background: 'rgba(var(--background))',
