@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 /* FONTS */
 
 @layer base {
@@ -61,23 +59,21 @@
 /* default scrollbar  */
 .custom-scrollbar {
    scrollbar-width: none;
-   /* Firefox */
    -ms-overflow-style: none;
-   /* IE and Edge */
    overflow-x: auto;
 }
 
 .custom-scrollbar::-webkit-scrollbar {
    display: none;
-   /* Chrome, Safari, Opera */
 }
 
+/* colors */
 :root {
    --background: 9, 9, 22, 1;
-   --accent-1: 255, 38, 89;
-   --accent-2: 204, 255, 145;
-   --accent-3: 63, 114, 175;
+   --accent-1: 0, 232, 162;
+   --accent-2: 255, 241, 163;
+   --accent-3: 255, 46, 64;
    --text-clr1: 0, 0, 0;
-   --text-clr2: 255, 255, 255;
+   --text-clr2: 172, 174, 169;
    --filled: 17, 22, 41;
 }

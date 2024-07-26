@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { IoIosArrowForward } from "@react-icons/all-files/io/IoIosArrowForward";
-import { IoIosArrowBack } from "@react-icons/all-files/io/IoIosArrowBack";
+import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import Card from "./Card";
 
 const CardContainer = ({ cards, onDelete }) => {
@@ -14,10 +13,10 @@ const CardContainer = ({ cards, onDelete }) => {
 
 		if (event.deltaY < 0) {
 			// Scroll up, scroll right
-			container.scrollBy({ left: 100, behavior: "smooth" });
+			container.scrollBy({ left: 500, behavior: "smooth" });
 		} else {
 			// Scroll down, scroll left
-			container.scrollBy({ left: -100, behavior: "smooth" });
+			container.scrollBy({ left: -500, behavior: "smooth" });
 		}
 		updateArrows();
 	};
@@ -55,38 +54,42 @@ const CardContainer = ({ cards, onDelete }) => {
 	}, []);
 
 	return (
-		<div
-			className='flex space-x-7 p-2 items-center h-[100%] md:h-[100%] w-[100%] overflow-x-auto md:w-[75%] custom-scrollbar'
-			ref={containerRef}
-		>
-			{!isAtStart && (
+		<>
+			<div className='h-[60%] w-full flex  md:h-full  md:w-[80%]'>
 				<button
 					onClick={handleLeftArrowClick}
-					className='absolute  flex justify-center items-center  z-10 p-5 rounded-full'
+					className={`z-10 cursor-pointer transition-colors duration-300 ${
+						isAtStart ? "text-bg" : "text-accent1"
+					}`}
+					disabled={isAtStart}
 				>
-					<IoIosArrowBack
-						size={20}
-						className='bg-transparent absolute z-10 rounded-full  text-accent2 cursor-pointer'
+					<RiArrowLeftSLine
+						size={25}
 					/>
 				</button>
-			)}
-			{cards.map((item) => (
-				<div key={item.id} className='min-w-60 h-10'>
-					<Card {...item} onDelete={onDelete} />
+				<div
+					className='flex space-x-10 items-center md:h-full w-full overflow-x-auto  custom-scrollbar'
+					ref={containerRef}
+				>
+					{cards.map((item) => (
+						<div key={item.id} className='min-w-60  h-10'>
+							<Card {...item} onDelete={onDelete} />
+						</div>
+					))}
 				</div>
-			))}
-			{!isAtEnd && (
 				<button
 					onClick={handleRightArrowClick}
-					className='absolute  flex justify-center items-center right-5 z-10 p-5 rounded-full'
+					className={` z-10 cursor-pointer transition-colors duration-300 ${
+						isAtEnd ? "text-bg" : "text-accent1"
+					}`}
+					disabled={isAtEnd}
 				>
-					<IoIosArrowForward
-						size={20}
-						className='bg-transparent absolute z-10 rounded-full text-accent2 cursor-pointer'
+					<RiArrowRightSLine
+						size={25}
 					/>
 				</button>
-			)}
-		</div>
+			</div>
+		</>
 	);
 };
 

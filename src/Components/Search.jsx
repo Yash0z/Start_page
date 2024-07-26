@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
-import { FaCameraRetro } from "@react-icons/all-files/fa/FaCameraRetro";
-import { FaGoogle } from "@react-icons/all-files/fa/FaGoogle";
+import { FaCameraRetro,FaInternetExplorer } from "react-icons/fa";
 
 const Search = () => {
 	const [query, setQuery] = useState("");
@@ -47,36 +46,30 @@ const Search = () => {
 
 	return (
 		<>
-			<div className='relative flex justify-center top-60 mx-auto p-5 max-w-[35rem] bg-transparent'>
+			<div className='relative flex justify-between items-center w-[60%] lg:w-[70%]  h-10  border-b lg:top-5  bg-transparent'>
 				<input
-					className='font-Euclid_re text-md border-b-2 outline-none w-[88%] text-white pb-2 bg-transparent'
+					className='font-Euclid_re text-2  p-1 outline-none  w-[80%]  text-textclr2  bg-transparent'
 					type='text'
-					placeholder='Search Something'
+					placeholder='何 か を 探 し て い る . . . ?'
 					value={query}
 					onChange={(e) => setQuery(e.target.value)}
 					onKeyDown={handleKey}
 				/>
-				<button
-					onClick={searchGoogle}
-					className='border-b-2 text-accent2 w-[10%] sm:w-[6%] md:w-[5%] pb-2'
-					aria-label='Search Google'
-				>
-					<FaGoogle className='ml-2' size={17} />
-				</button>
-				<button
-					onClick={handleCameraClick}
-					className='border-b-2 text-accent2 w-[10%] sm:w-[6%] md:w-[5%] pb-2'
-					aria-label='Search Camera'
-				>
-					<FaCameraRetro className='ml-2' size={17} />
-				</button>
-				<input
-					type='file'
-					ref={fileInputRef}
-					onChange={handleFileChange}
-					style={{ display: "none" }}
-					accept='image/*'
-				/>
+				<div className='flex justify-between space-x-4  text-accent1 pb-2   '>
+					<button onClick={searchGoogle} aria-label='Search Google'>
+						<FaInternetExplorer size={22} />
+					</button>
+					<button onClick={handleCameraClick} aria-label='Search Camera'>
+						<FaCameraRetro size={22} />
+					</button>
+					<input
+						type='file'
+						ref={fileInputRef}
+						onChange={handleFileChange}
+						style={{ display: "none" }}
+						accept='image/*'
+					/>
+				</div>
 			</div>
 		</>
 	);

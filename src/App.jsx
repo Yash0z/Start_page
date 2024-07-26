@@ -1,11 +1,12 @@
 import React from "react";
-import { MdAdd } from "@react-icons/all-files/md/MdAdd";
 import Search from "./Components/Search";
 import Popup from "./Components/Popup";
+import DateComponent from "./Components/DateComponent";
 import Workspace from "./Components/Workspace";
 import { useCardsData } from "./hooks/useCardsData";
 import { usePopup } from "./hooks/usePopup";
 import { addCardHandler, deleteCardHandler } from "./utils/cardHandlers";
+import { MdAddLink } from "react-icons/md";
 
 function App() {
 	const {
@@ -42,11 +43,18 @@ function App() {
 
 	return (
 		<>
-			<div className='relative w-screen h-[39vh]'>
-				<div className='absolute w-full text-center top-20 font-Noto_JP text-[100px] text-accent1 '>
-					グーグル
+			<div className='relative flex  flex-col-reverse w-screen h-[39vh] lg:flex lg:flex-row lg:justify-between'>
+            <div className="flex justify-center items-center  content-center lg:w-[50%]">
+            <Search />
 				</div>
-				<Search className='absolute inset-0 m-auto' />
+				<div className='w-[70%] mx-auto h-full  flex flex-col justify-center gap-2 items-center lg:w-[50%]  '>
+					<DateComponent />
+					<img
+						src='./Public/kyn.webp'
+						alt=''
+						className='min-w-[90%] h-52'
+					/>
+				</div>
 			</div>
 
 			<div className='w-screen h-[60vh]'>
@@ -67,10 +75,10 @@ function App() {
 				/>
 				<button
 					aria-label='addShortcut'
-					className='p-2 rounded-full absolute bottom-5 right-5 bg-accent2 flex justify-between items-center'
+					className='p-2 rounded-full absolute bottom-5 right-5 bg-accent1 flex justify-between items-center'
 					onClick={togglePopup}
 				>
-					<MdAdd size={20} className='bg-transparent  rounded-full ' />
+					<MdAddLink size={23} className='bg-transparent  rounded-full ' />
 				</button>
 			</div>
 			{isOpen && <Popup isOpen={togglePopup} addCard={addCard} />}

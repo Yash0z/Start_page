@@ -3,15 +3,15 @@ const withMT = require("@material-tailwind/react/utils/withMT");
 module.exports = withMT({
    content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
    theme: {
+      screens: {
+         'lg': "1694px",
+       },
       extend: {
          fontFamily: {
             Euclid_re: ['Euclid_re'],
             Euclid_li: ['Euclid_li'],
             Raleway_re: ['raleway_re'],
-            Noto_JP: ['Noto_JP'],
             PlaywriteEN: ['PlaywriteEN'],
-            Montserrat_Black: ['Montserrat_Black'],
-            PlaywriteIN_re: ['PlaywriteIN_re'],
          },
          colors: {
             background: 'rgba(var(--background))',
