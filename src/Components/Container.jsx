@@ -57,15 +57,14 @@ const CardContainer = ({ cards, onDelete }) => {
 		<>
 			<div className='h-[60%] w-full flex  md:h-full  md:w-[80%]'>
 				<button
+					aria-label='navigation-btns'
 					onClick={handleLeftArrowClick}
 					className={`z-10 cursor-pointer transition-colors duration-300 ${
 						isAtStart ? "text-bg" : "text-accent1"
 					}`}
 					disabled={isAtStart}
 				>
-					<RiArrowLeftSLine
-						size={25}
-					/>
+					<RiArrowLeftSLine size={25} />
 				</button>
 				<div
 					className='flex space-x-10 items-center md:h-full w-full overflow-x-auto  custom-scrollbar'
@@ -78,15 +77,14 @@ const CardContainer = ({ cards, onDelete }) => {
 					))}
 				</div>
 				<button
+					aria-label='navigation-btns'
 					onClick={handleRightArrowClick}
 					className={` z-10 cursor-pointer transition-colors duration-300 ${
 						isAtEnd ? "text-bg" : "text-accent1"
 					}`}
 					disabled={isAtEnd}
 				>
-					<RiArrowRightSLine
-						size={25}
-					/>
+					<RiArrowRightSLine size={25} />
 				</button>
 			</div>
 		</>
