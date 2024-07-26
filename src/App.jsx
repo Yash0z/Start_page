@@ -44,13 +44,13 @@ function App() {
 	return (
 		<>
 			<div className='relative flex  flex-col-reverse w-screen h-[39vh] lg:flex lg:flex-row lg:justify-between'>
-            <div className="flex justify-center items-center  content-center lg:w-[50%]">
-            <Search />
+				<div className='flex justify-center items-center  content-center lg:w-[50%]'>
+					<Search />
 				</div>
 				<div className='w-[70%] mx-auto h-full  flex flex-col justify-center gap-2 items-center lg:w-[50%]  '>
 					<DateComponent />
 					<img
-						src='./Public/kyn.webp'
+						src='/Public/kyn.webp'
 						alt=''
 						className='min-w-[90%] h-52'
 					/>
