@@ -9,7 +9,7 @@
 <h2 align="left">Preview 📸</h2>
 
 <div align="center">
-  <img src="startpage.png"  />
+  <img src="./public/assets/startpage.png"  />
 </div>
 
 <h2 align="left">Configuration 🚀</h2>
