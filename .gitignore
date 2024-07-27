@@ -1,6 +1,6 @@
 #custom
 /.gitignore
-/public/assets/startpage.png
+/startpage.png
 
 # Logs
 logs
