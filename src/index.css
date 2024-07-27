@@ -8,26 +8,26 @@
    @font-face {
       font-family: 'Euclid_re';
       font-display: swap;
-      src: url('/Public/assets/fonts/Euclid_reg.woff2') format('woff2');
+      src: url('/fonts/Euclid_reg.woff2') format('woff2');
    }
 
    @font-face {
       font-family: 'Euclid_li';
       font-display: swap;
-      src: url('/Public/assets/fonts/Euclid_Light.woff2') format('woff2');
+      src: url('/fonts/Euclid_Light.woff2') format('woff2');
    }
 
 
    @font-face {
       font-family: 'PlaywriteEN';
       font-display: swap;
-      src: url('/Public/assets/fonts/PlaywriteEN_reg.woff2') format('woff2');
+      src: url('/fonts/PlaywriteEN_reg.woff2') format('woff2');
    }
 
    @font-face {
       font-family: 'raleway_re';
       font-display: swap;
-      src: url('/Public/assets/fonts/Raleway-Regular.ttf') format('woff2');
+      src: url('/fonts/Raleway-Regular.ttf') format('woff2');
    }
 
 }
