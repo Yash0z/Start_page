@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { FaCameraRetro,FaInternetExplorer } from "react-icons/fa";
+import { FaCameraRetro, FaInternetExplorer } from "react-icons/fa";
 
 const Search = () => {
 	const [query, setQuery] = useState("");
@@ -15,7 +15,7 @@ const Search = () => {
 		const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(
 			query
 		)}`;
-		window.location.href = searchUrl;
+		window.open(searchUrl, "_blank");
 	};
 
 	const handleCameraClick = () => {
