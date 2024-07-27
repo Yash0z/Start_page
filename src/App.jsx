@@ -50,11 +50,12 @@ function App() {
 				<div className='w-[70%] mx-auto h-full  flex flex-col justify-center gap-2 items-center lg:w-[50%]  '>
 					<DateComponent />
 					<img
-						src='/assets/kynb.png'
-						alt=''
-						height='10'
-						width='10'
-						className='min-w-[90%] h-52'
+						fetchpriority='high'
+						src='/assets/kyn.webp'
+						alt='Descriptive alt text'
+						height='208'
+						width='374'
+						className='min-w-[90%] h-52 object-cover'
 					/>
 				</div>
 			</div>
