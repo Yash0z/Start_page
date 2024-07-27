@@ -50,7 +50,7 @@ function App() {
 				<div className='w-[70%] mx-auto h-full  flex flex-col justify-center gap-2 items-center lg:w-[50%]  '>
 					<DateComponent />
 					<img
-						src='/images/kynb.png'
+						src='/assets/kynb.png'
 						alt=''
 						height='10'
 						width='10'
