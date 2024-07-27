@@ -1,3 +1,7 @@
+#custom
+/.gitignore
+/public/assets/startpage.png
+
 # Logs
 logs
 *.log
